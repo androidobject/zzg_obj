@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--cardUseCompatPadding防止卡片内容和边角的重叠-->
+    <!--cardUseCompatPadding compat一般是为了兼容设备，保持一样的外观，所以这里就是保持内边距的计算方式一样-->
+    <!--cardBackgroundColor属性指定CardView的背景色；-->
+    <!--cardCornerRadius属性指定作为边框的圆角矩形的半径；-->
+    <!--cardElevation是阴影大小，MAX～～是最大阴影大小；-->
+    <!--android:clickable="true"-->
+    <!--android:focusable="true"-->
+    <!--android:foreground="?android:attr/selectableItemBackground"水波纹点击效果-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/mUsernameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:gravity="center"
+            android:text="1234" />
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
