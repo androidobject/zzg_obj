@@ -49,7 +49,8 @@
         <activity
             android:name="com.bu54.ui.MagicLineActivity"
             android:label="@string/title_activity_magic_line"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.bu54.ui.LoginActivity"></activity>
     </application>
 
 </manifest>

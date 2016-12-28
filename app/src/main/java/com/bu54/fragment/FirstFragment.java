@@ -20,6 +20,7 @@ import com.bu54.interf.OnRecycleItemClickListener;
 import com.bu54.model.MainModel;
 import com.bu54.ui.CanvasActivity;
 import com.bu54.ui.LoadLayoutDemo;
+import com.bu54.ui.LoginActivity;
 import com.bu54.ui.MagicLineActivity;
 import com.bu54.ui.WaveActivity;
 
@@ -55,6 +56,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("加载动画", "", 1));
         mList.add(new MainModel("波浪", "", 1));
         mList.add(new MainModel("魔法线", "", 1));
+        mList.add(new MainModel("登陆", "", 1));
     }
 
     @Override
@@ -68,6 +70,8 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
             intent = new Intent(getActivity(), WaveActivity.class);
         }else if(postion==3){
             intent = new Intent(getActivity(), MagicLineActivity.class);
+        }else if(postion==4){
+            intent =new Intent(getActivity(),LoginActivity.class);
         }
         startActivity(intent);
     }
