@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.bu54.adapter.MainRecycleAdapter;
 import com.bu54.annotataion.ViewInject;
@@ -18,7 +19,9 @@ import com.bu54.base.BaseFragment;
 import com.bu54.canvas.R;
 import com.bu54.interf.OnRecycleItemClickListener;
 import com.bu54.model.MainModel;
+import com.bu54.ui.BaijiaCloudActivity;
 import com.bu54.ui.CanvasActivity;
+import com.bu54.ui.InputAdjustActivity;
 import com.bu54.ui.LoadLayoutDemo;
 import com.bu54.ui.LoginActivity;
 import com.bu54.ui.MagicLineActivity;
@@ -57,6 +60,9 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("波浪", "", 1));
         mList.add(new MainModel("魔法线", "", 1));
         mList.add(new MainModel("登陆", "", 1));
+        mList.add(new MainModel("输入法遮挡","",1));
+        mList.add(new MainModel("百家云demo","",1));
+
     }
 
     @Override
@@ -72,6 +78,10 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
             intent = new Intent(getActivity(), MagicLineActivity.class);
         }else if(postion==4){
             intent =new Intent(getActivity(),LoginActivity.class);
+        }else if(postion==5){
+            intent=new Intent(getActivity(), InputAdjustActivity.class);
+        }else if(postion==6){
+            intent=new Intent(getActivity(), BaijiaCloudActivity.class);
         }
         startActivity(intent);
     }

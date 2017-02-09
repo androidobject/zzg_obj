@@ -2,6 +2,8 @@ package com.bu54.ui;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -10,7 +12,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.bu54.base.BaseActivity;
 import com.bu54.base.BaseFragment;
@@ -18,6 +20,8 @@ import com.bu54.fragment.FirstFragment;
 import com.bu54.annotataion.ViewInject;
 import com.bu54.canvas.R;
 import com.bu54.fragment.FourFragment;
+
+import java.util.logging.LogRecord;
 
 public class MainActivity extends BaseActivity {
 
@@ -42,11 +46,15 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
         initData();
+
+
     }
 
     private void initData() {
