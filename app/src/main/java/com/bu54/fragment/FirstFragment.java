@@ -25,6 +25,7 @@ import com.bu54.ui.InputAdjustActivity;
 import com.bu54.ui.LoadLayoutDemo;
 import com.bu54.ui.LoginActivity;
 import com.bu54.ui.MagicLineActivity;
+import com.bu54.ui.ViewAcitivity;
 import com.bu54.ui.WaveActivity;
 
 import java.util.ArrayList;
@@ -62,6 +63,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("登陆", "", 1));
         mList.add(new MainModel("输入法遮挡","",1));
         mList.add(new MainModel("百家云demo","",1));
+        mList.add(new MainModel("View横竖屏","",1));
 
     }
 
@@ -82,6 +84,8 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
             intent=new Intent(getActivity(), InputAdjustActivity.class);
         }else if(postion==6){
             intent=new Intent(getActivity(), BaijiaCloudActivity.class);
+        }else if(postion==7){
+            intent=new Intent(getActivity(), ViewAcitivity.class);
         }
         startActivity(intent);
     }

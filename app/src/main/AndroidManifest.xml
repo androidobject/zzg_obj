@@ -23,9 +23,9 @@
         android:theme="@style/AppTheme">
 
         <!-- 硬件加速 -->
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!-- <meta-data -->
+        <!-- android:name="UMENG_CHANNEL" -->
+        <!-- android:value="${UMENG_CHANNEL_VALUE}" /> -->
 
         <activity
             android:name="com.bu54.ui.MainActivity"
@@ -55,7 +55,10 @@
             android:name="com.bu54.ui.InputAdjustActivity"
             android:label="@string/title_activity_input_adjust"
             android:theme="@style/AppTheme" />
-        <activity android:name="com.bu54.ui.BaijiaCloudActivity"></activity>
+        <activity android:name="com.bu54.ui.BaijiaCloudActivity" />
+        <activity android:name="com.bu54.ui.BaijiayunLiveActivity"></activity>
+        <activity android:name="com.bu54.ui.ViewAcitivity"
+            android:configChanges="orientation|screenSize"></activity>
     </application>
 
 </manifest>
