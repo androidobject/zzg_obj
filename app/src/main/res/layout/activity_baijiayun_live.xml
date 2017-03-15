@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_baijiayun_live"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bu54.ui.BaijiayunLiveActivity">
+
+    <FrameLayout
+        android:id="@+id/activity_join_code_video"
+        android:layout_width="300dp"
+        android:layout_centerInParent="true"
+        android:layout_height="300dp" />
+
+    <FrameLayout
+        android:id="@+id/activity_join_code_remote_video"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+
+    <FrameLayout
+        android:id="@+id/activity_join_code_ppt"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/lp_override_main"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/activity_join_code_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="菜单" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_botton_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_wide_gray_corner_white_bg" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" />
+    </LinearLayout>
+
+    <!--聊天消息-->
+    <RelativeLayout
+        android:id="@+id/rl_tv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@id/ll_botton_view"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/sl_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/activity_login_text_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical" />
+
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>
