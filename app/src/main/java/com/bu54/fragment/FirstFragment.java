@@ -1,17 +1,8 @@
 package com.bu54.fragment;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.bu54.adapter.MainRecycleAdapter;
 import com.bu54.annotataion.ViewInject;
@@ -19,13 +10,10 @@ import com.bu54.base.BaseFragment;
 import com.bu54.canvas.R;
 import com.bu54.interf.OnRecycleItemClickListener;
 import com.bu54.model.MainModel;
-import com.bu54.ui.BaijiaCloudActivity;
 import com.bu54.ui.CanvasActivity;
-import com.bu54.ui.InputAdjustActivity;
 import com.bu54.ui.LoadLayoutDemo;
 import com.bu54.ui.LoginActivity;
 import com.bu54.ui.MagicLineActivity;
-import com.bu54.ui.ViewAcitivity;
 import com.bu54.ui.WaveActivity;
 
 import java.util.ArrayList;
@@ -61,9 +49,6 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("波浪", "", 1));
         mList.add(new MainModel("魔法线", "", 1));
         mList.add(new MainModel("登陆", "", 1));
-        mList.add(new MainModel("输入法遮挡","",1));
-        mList.add(new MainModel("百家云demo","",1));
-        mList.add(new MainModel("View横竖屏","",1));
 
     }
 
@@ -81,11 +66,11 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         }else if(postion==4){
             intent =new Intent(getActivity(),LoginActivity.class);
         }else if(postion==5){
-            intent=new Intent(getActivity(), InputAdjustActivity.class);
+//            intent=new Intent(getActivity(), InputAdjustActivity.class);
         }else if(postion==6){
-            intent=new Intent(getActivity(), BaijiaCloudActivity.class);
+//            intent=new Intent(getActivity(), BaijiaCloudActivity.class);
         }else if(postion==7){
-            intent=new Intent(getActivity(), ViewAcitivity.class);
+//            intent=new Intent(getActivity(), ViewAcitivity.class);
         }
         startActivity(intent);
     }

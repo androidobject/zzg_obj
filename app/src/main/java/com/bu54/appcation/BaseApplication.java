@@ -1,15 +1,9 @@
 package com.bu54.appcation;
 
 import android.app.Application;
-
-//import com.baijiahulian.livecore.LiveSDK;
-//import com.baijiahulian.livecore.context.LPConstants;
 import com.bu54.canvas.R;
-import com.bu54.crash.CrashHandler;
 import com.bu54.view.LoadingLayout;
-//import com.orhanobut.logger.Logger;
-//
-//import static com.orhanobut.logger.Logger.init;
+
 
 
 /**
@@ -22,12 +16,6 @@ public class BaseApplication extends Application {
         super.onCreate();
         //网络加载状态初始化
         initConfig();
-        // catch捕获的异常
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(this);
-        Thread.setDefaultUncaughtExceptionHandler(crashHandler);
-        //初始化百家云直播sdk
-//        LiveSDK.init("partnerId", LPConstants.LPDeployType.Product);
     }
 
     private void initConfig() {
