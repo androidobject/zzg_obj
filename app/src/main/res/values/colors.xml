@@ -8,4 +8,20 @@
     <color name="white">#FFFFFF</color>
     <color name="corner_line">#dedede</color>
     <color name="lp_override_main">#ff9900</color>
+    <!--孙超 折叠view 联动-->
+    <color name="colorBlack">#000000</color>
+    <color name="colorCoral">#ff7f50</color>
+    <color name="colorCornflowerblue">#6495ed</color>
+    <color name="colorDarkorchid">#9932cc</color>
+    <color name="colorDeeppink">#ff1493</color>
+    <color name="colorCyan">#00ffff</color>
+    <color name="colorDarkgoldenrod">#b8860b</color>
+    <color name="colorFuchsia">#ff00ff</color>
+    <color name="colorGoldenrod">#daa520</color>
+    <color name="colorGreenyellow">#adff2f</color>
+    <color name="colorGreen">#008000</color>
+    <color name="colorIndianred">#cd5c5c</color>
+    <color name="colorIndigo">#4b0082</color>
+    <color name="colorLightgreen">#90ee90</color>
+    <color name="colorLightslategray">#778899</color>
 </resources>
