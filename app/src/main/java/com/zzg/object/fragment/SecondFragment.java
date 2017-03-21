@@ -15,7 +15,7 @@ public class SecondFragment extends BaseFragment {
     RecyclerView mRecycleView;
     @Override
     public int getLayoutId() {
-        return R.layout.fragment_meizi_layout;
+        return R.layout.fragment_sencond;
     }
 
     @Override
