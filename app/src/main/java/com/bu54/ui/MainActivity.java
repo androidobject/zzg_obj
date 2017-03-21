@@ -6,12 +6,16 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bu54.base.BaseActivity;
@@ -20,6 +24,7 @@ import com.bu54.fragment.FirstFragment;
 import com.bu54.annotataion.ViewInject;
 import com.bu54.canvas.R;
 import com.bu54.fragment.FourFragment;
+import com.bu54.util.SnackBarUtil;
 
 import java.util.logging.LogRecord;
 
@@ -32,6 +37,7 @@ public class MainActivity extends BaseActivity {
     DrawerLayout mDrawer;
     @ViewInject(R.id.toolbar)
     Toolbar mToolBar;
+
     private BaseFragment mCurrentFragmet;
     private MenuItem mCurrentItem;
 
@@ -40,12 +46,10 @@ public class MainActivity extends BaseActivity {
     private FirstFragment firstFragment;
     private FourFragment fourFragment;
 
-
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;
     }
-
 
 
     @Override
@@ -130,11 +134,26 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-
         if (mNavigation.isShown()) {
             mDrawer.closeDrawers();
         } else {
-            showExit();
+//            showExit();
+            showSnackbar();
+        }
+    }
+
+    Snackbar snackbar;
+    private void showSnackbar() {
+        if(snackbar!=null&&snackbar.isShown()){
+            finishAll();
+        }else{
+            snackbar = SnackBarUtil.LongSnackbar(getWindow().getDecorView(), "再次点击退出", SnackBarUtil.Info);
+            snackbar.setAction("点击退出啦", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finishAll();
+                }
+            }).show();
         }
     }
 
