@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bu54.canvas">
+    package="com.zzg.object">
 
     <!-- 网络访问权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name="com.bu54.appcation.BaseApplication"
+        android:name="com.zzg.object.appcation.BaseApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/logo"
@@ -29,7 +29,7 @@
         <!-- android:value="${UMENG_CHANNEL_VALUE}" /> -->
 
         <activity
-            android:name="com.bu54.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,21 +38,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.bu54.ui.CanvasActivity"
+            android:name=".ui.CanvasActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.bu54.ui.LoadLayoutDemo"
+            android:name=".ui.LoadLayoutDemo"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.bu54.ui.WaveActivity"
+            android:name=".ui.WaveActivity"
             android:label="@string/title_activity_wave"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.bu54.ui.MagicLineActivity"
+            android:name=".ui.MagicLineActivity"
             android:label="@string/title_activity_magic_line"
             android:theme="@style/AppTheme" />
-        <activity android:name="com.bu54.ui.LoginActivity" />
-        <activity android:name="com.bu54.ui.ScrollCardPagerActivity"/>
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.ScrollCardPagerActivity"/>
     </application>
 
 </manifest>

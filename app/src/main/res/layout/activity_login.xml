@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.bu54.ui.LoginActivity">
+    tools:context="com.zzg.object.ui.LoginActivity">
     <include layout="@layout/toolbar" />
 
 
@@ -17,7 +17,7 @@
         android:padding="30dp">
 
 
-        <com.bu54.view.ClearEditTextView
+        <com.zzg.object.view.ClearEditTextView
             android:id="@+id/phone_num_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:paddingRight="10dp"
             android:textColorHint="#88cccccc" />
 
-        <com.bu54.view.ClearEditTextView
+        <com.zzg.object.view.ClearEditTextView
             android:id="@+id/password_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp">
 
-            <com.bu54.view.ClearEditTextView
+            <com.zzg.object.view.ClearEditTextView
                 android:id="@+id/msg_code_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

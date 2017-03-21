@@ -5,25 +5,25 @@
     android:background="@android:color/transparent"
     android:orientation="vertical">
 
-    <com.bu54.view.VerticalViewPager
+    <com.zzg.object.view.VerticalViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/rootVerticalViewPager">
-    </com.bu54.view.VerticalViewPager>
+    </com.zzg.object.view.VerticalViewPager>
 
-    <com.bu54.view.NotouchLayout
+    <com.zzg.object.view.NotouchLayout
         android:weightSum="600"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.bu54.view.VerticalViewPager
+        <com.zzg.object.view.VerticalViewPager
             android:id="@+id/vp_one"
             android:focusable="false"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="297">
-        </com.bu54.view.VerticalViewPager>
+        </com.zzg.object.view.VerticalViewPager>
 
 
         <RelativeLayout
@@ -32,7 +32,7 @@
             android:layout_height="0dp"
             android:layout_weight="200">
 
-            <com.bu54.view.VerticalViewPager
+            <com.zzg.object.view.VerticalViewPager
                 android:id="@+id/vp_second"
                 android:focusable="false"
                 android:layout_width="match_parent"
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="40">
-            <com.bu54.view.VerticalViewPager
+            <com.zzg.object.view.VerticalViewPager
                 android:id="@+id/vp_third"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="46">
-            <com.bu54.view.VerticalViewPager
+            <com.zzg.object.view.VerticalViewPager
                 android:id="@+id/vp_fourth"
                 android:focusable="false"
                 android:layout_width="match_parent"
@@ -97,5 +97,5 @@
                 android:layout_height="match_parent" />
         </RelativeLayout>
 
-    </com.bu54.view.NotouchLayout>
+    </com.zzg.object.view.NotouchLayout>
 </FrameLayout>

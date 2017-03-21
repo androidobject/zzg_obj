@@ -82,11 +82,11 @@
             android:text="开始绘制" />
     </LinearLayout>
 
-    <com.bu54.view.MagicLineView
+    <com.zzg.object.view.MagicLineView
         android:id="@+id/magic_line"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="5"></com.bu54.view.MagicLineView>
+        android:layout_weight="5"></com.zzg.object.view.MagicLineView>
 
     <Spinner
         android:id="@+id/selete_draw_spinner"

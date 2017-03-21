@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.bu54.ui.CanvasActivity">
+    tools:context="com.zzg.object.ui.CanvasActivity">
 
     <include layout="@layout/toolbar" />
 
-    <com.bu54.view.CanvasView
+    <com.zzg.object.view.CanvasView
         android:id="@+id/canvas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
