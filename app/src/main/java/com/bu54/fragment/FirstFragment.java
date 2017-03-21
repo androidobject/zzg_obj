@@ -14,7 +14,7 @@ import com.bu54.ui.CanvasActivity;
 import com.bu54.ui.LoadLayoutDemo;
 import com.bu54.ui.LoginActivity;
 import com.bu54.ui.MagicLineActivity;
-import com.bu54.ui.ScrollCardPager;
+import com.bu54.ui.ScrollCardPagerActivity;
 import com.bu54.ui.WaveActivity;
 
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         }else if(postion==4){
             intent =new Intent(getActivity(),LoginActivity.class);
         }else if(postion==5){
-            intent=new Intent(getActivity(), ScrollCardPager.class);
+            intent=new Intent(getActivity(), ScrollCardPagerActivity.class);
         }else if(postion==6){
 //            intent=new Intent(getActivity(), BaijiaCloudActivity.class);
         }else if(postion==7){

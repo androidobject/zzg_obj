@@ -24,7 +24,7 @@ import java.util.Random;
  * Created by apple on 2017/3/20.
  */
 
-public class ScrollCardPager extends BaseActivity {
+public class ScrollCardPagerActivity extends BaseActivity {
     private VerticalViewPager vp_one;
     private VerticalViewPager vp_second;
     private VerticalViewPager vp_third;
@@ -94,7 +94,7 @@ public class ScrollCardPager extends BaseActivity {
                         break;
                     case ViewPager.SCROLL_STATE_IDLE:
                         if (rootVerticalViewPager.getCurrentItem() == rootVerticalViewPager.getAdapter().getCount() - 1 && !flag) {
-                            Toast.makeText(ScrollCardPager.this, "没有更多数据了", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ScrollCardPagerActivity.this, "没有更多数据了", Toast.LENGTH_SHORT).show();
                         }
                         flag = true;
                         break;

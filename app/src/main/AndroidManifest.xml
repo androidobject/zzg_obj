@@ -51,7 +51,7 @@
             android:label="@string/title_activity_magic_line"
             android:theme="@style/AppTheme" />
         <activity android:name="com.bu54.ui.LoginActivity" />
-        <activity android:name="com.bu54.ui.ScrollCardPager"/>
+        <activity android:name="com.bu54.ui.ScrollCardPagerActivity"/>
     </application>
 
 </manifest>
