@@ -1,5 +1,27 @@
 package com.zzg.object.ui;
-
+/**
+ *                    _ooOoo_
+ *                   o8888888o
+ *                   88" . "88
+ *                   (| -_- |)
+ *                    O\ = /O
+ *                ____/`---'\____
+ *              .   ' \\| |// `.
+ *               / \\||| : |||// \
+ *             / _||||| -:- |||||- \
+ *               | | \\\ - /// | |
+ *             | \_| ''\---/'' | |
+ *              \ .-\__ `-` ___/-. /
+ *           ___`. .' /--.--\ `. . __
+ *        ."" '< `.___\_<|>_/___.' >'"".
+ *       | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ *         \ \ `-. \_ __\ /__ _/ .-` / /
+ * ======`-.____`-.___\_____/___.-`____.-'======
+ *                    `=---='
+ *
+ * .............................................
+ *          佛祖保佑             永无BUG
+ */
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,6 +41,7 @@ import com.zzg.object.fragment.FirstFragment;
 import com.zzg.object.annotataion.ViewInject;
 import com.zzg.object.R;
 import com.zzg.object.fragment.FourFragment;
+import com.zzg.object.fragment.SecondFragment;
 import com.zzg.object.util.SnackBarUtil;
 
 public class MainActivity extends BaseActivity {
@@ -37,6 +60,7 @@ public class MainActivity extends BaseActivity {
     private ActionBarDrawerToggle mDrawerToggle;
 
     private FirstFragment firstFragment;
+    private SecondFragment secondFragment;
     private FourFragment fourFragment;
 
     @Override
@@ -56,6 +80,7 @@ public class MainActivity extends BaseActivity {
 
     private void initData() {
         firstFragment = new FirstFragment();
+        secondFragment=new SecondFragment();
         fourFragment = new FourFragment();
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fl_main, firstFragment)
@@ -77,8 +102,8 @@ public class MainActivity extends BaseActivity {
                         mToolBar.setTitle("首页");
                         break;
                     case R.id.drawer_gril:
-//                        switchFragment(mGrilFragment);
-//                        mCurrentFragmet = mGrilFragment;
+                        switchFragment(secondFragment);
+                        mCurrentFragmet = secondFragment;
                         mToolBar.setTitle("妹纸");
                         break;
                     case R.id.drawer_like:
