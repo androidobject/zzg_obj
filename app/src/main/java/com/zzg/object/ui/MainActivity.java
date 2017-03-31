@@ -84,7 +84,7 @@ public class MainActivity extends BaseActivity {
         fourFragment = new FourFragment();
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fl_main, firstFragment)
-                .commit();
+                .commitAllowingStateLoss();
         mCurrentFragmet = firstFragment;
 
         mCurrentItem = mNavigation.getMenu().findItem(R.id.index);
