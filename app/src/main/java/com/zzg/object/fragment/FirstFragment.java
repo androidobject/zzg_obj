@@ -10,6 +10,7 @@ import com.zzg.object.R;
 import com.zzg.object.interf.OnRecycleItemClickListener;
 import com.zzg.object.model.MainModel;
 import com.zzg.object.ui.CanvasActivity;
+import com.zzg.object.ui.GestureDetectorActivity;
 import com.zzg.object.ui.LoadLayoutDemo;
 import com.zzg.object.ui.LoginActivity;
 import com.zzg.object.ui.MagicLineActivity;
@@ -50,6 +51,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("魔法线", "", 1));
         mList.add(new MainModel("登陆", "", 1));
         mList.add(new MainModel("垂直滑动pager", "", 1));
+        mList.add(new MainModel("手势", "", 1));
 
     }
 
@@ -72,7 +74,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         } else if (postion == 6) {
             intent = new Intent(getActivity(), ScrollCardPagerActivity.class);
         } else if (postion == 7) {
-//            intent=new Intent(getActivity(), BaijiaCloudActivity.class);
+            intent=new Intent(getActivity(), GestureDetectorActivity.class);
         } else if (postion == 8) {
 //            intent=new Intent(getActivity(), ViewAcitivity.class);
         }
