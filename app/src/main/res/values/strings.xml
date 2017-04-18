@@ -6,4 +6,5 @@
     <string name="title_activity_wave">WaveActivity</string>
     <string name="title_activity_magic_line">MagicLineActivity</string>
     <string name="title_activity_input_adjust">InputAdjustActivity</string>
+    <string name="title_activity_http_test">HttpTestActivity</string>
 </resources>

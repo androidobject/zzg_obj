@@ -3,6 +3,7 @@ package com.zzg.object.fragment;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
 import com.zzg.object.adapter.MainRecycleAdapter;
 import com.zzg.object.annotataion.ViewInject;
 import com.zzg.object.base.BaseFragment;
@@ -11,6 +12,7 @@ import com.zzg.object.interf.OnRecycleItemClickListener;
 import com.zzg.object.model.MainModel;
 import com.zzg.object.ui.CanvasActivity;
 import com.zzg.object.ui.GestureDetectorActivity;
+import com.zzg.object.ui.HttpTestActivity;
 import com.zzg.object.ui.LoadLayoutDemo;
 import com.zzg.object.ui.LoginActivity;
 import com.zzg.object.ui.MagicLineActivity;
@@ -27,6 +29,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
     @ViewInject(R.id.recycle)
     RecyclerView recyclerView;
     private List<MainModel> mList = new ArrayList<>();
+
     @Override
     public int getLayoutId() {
         return R.layout.fragment_first;
@@ -52,6 +55,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("登陆", "", 1));
         mList.add(new MainModel("垂直滑动pager", "", 1));
         mList.add(new MainModel("手势", "", 1));
+        mList.add(new MainModel("http请求", "", 1));
 
     }
 
@@ -74,9 +78,9 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         } else if (postion == 6) {
             intent = new Intent(getActivity(), ScrollCardPagerActivity.class);
         } else if (postion == 7) {
-            intent=new Intent(getActivity(), GestureDetectorActivity.class);
+            intent = new Intent(getActivity(), GestureDetectorActivity.class);
         } else if (postion == 8) {
-//            intent=new Intent(getActivity(), ViewAcitivity.class);
+            intent = new Intent(getActivity(), HttpTestActivity.class);
         }
         startActivity(intent);
     }
