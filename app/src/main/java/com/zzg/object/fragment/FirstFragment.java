@@ -16,6 +16,7 @@ import com.zzg.object.ui.HttpTestActivity;
 import com.zzg.object.ui.LoadLayoutDemo;
 import com.zzg.object.ui.LoginActivity;
 import com.zzg.object.ui.MagicLineActivity;
+import com.zzg.object.ui.PatternLockActivity;
 import com.zzg.object.ui.ScrollCardPagerActivity;
 import com.zzg.object.ui.WaveActivity;
 
@@ -56,6 +57,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("垂直滑动pager", "", 1));
         mList.add(new MainModel("手势", "", 1));
         mList.add(new MainModel("http请求", "", 1));
+        mList.add(new MainModel("手势锁", "", 1));
 
     }
 
@@ -81,6 +83,8 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
             intent = new Intent(getActivity(), GestureDetectorActivity.class);
         } else if (postion == 8) {
             intent = new Intent(getActivity(), HttpTestActivity.class);
+        }else if(postion==9){
+            intent = new Intent(getActivity(), PatternLockActivity.class);
         }
         startActivity(intent);
     }

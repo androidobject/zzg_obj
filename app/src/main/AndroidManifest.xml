@@ -50,6 +50,7 @@
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.ScrollCardPagerActivity" />
         <activity android:name=".ui.GestureDetectorActivity" />
+        <activity android:name=".ui.PatternLockActivity" />
         <activity
             android:name=".ui.HttpTestActivity"
             android:label="@string/title_activity_http_test"
