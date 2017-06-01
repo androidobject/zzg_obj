@@ -54,7 +54,8 @@
         <activity
             android:name=".ui.HttpTestActivity"
             android:label="@string/title_activity_http_test"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ui.KotLinFirstActivity"></activity>
     </application>
 
 </manifest>
