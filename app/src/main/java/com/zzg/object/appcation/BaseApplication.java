@@ -2,7 +2,6 @@ package com.zzg.object.appcation;
 
 import android.app.Application;
 
-import com.squareup.leakcanary.LeakCanary;
 import com.zzg.object.R;
 import com.zzg.object.view.LoadingLayout;
 
@@ -18,12 +17,12 @@ public class BaseApplication extends Application {
         super.onCreate();
         //网络加载状态初始化
         initConfig();
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
-        LeakCanary.install(this);
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
+//            // This process is dedicated to LeakCanary for heap analysis.
+//            // You should not init your app in this process.
+//            return;
+//        }
+//        LeakCanary.install(this);
     }
 
     private void initConfig() {

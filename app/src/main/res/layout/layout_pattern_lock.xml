@@ -12,7 +12,7 @@
         android:layout_height="84dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="104dp"
-        android:src="@drawable/leak_canary_icon"/>
+        android:src="@mipmap/ic_github"/>
 
     <TextView
         android:id="@+id/profile_name"

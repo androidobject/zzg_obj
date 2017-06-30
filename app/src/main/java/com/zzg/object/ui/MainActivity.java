@@ -1,27 +1,28 @@
 package com.zzg.object.ui;
 /**
- *                    _ooOoo_
- *                   o8888888o
- *                   88" . "88
- *                   (| -_- |)
- *                    O\ = /O
- *                ____/`---'\____
- *              .   ' \\| |// `.
- *               / \\||| : |||// \
- *             / _||||| -:- |||||- \
- *               | | \\\ - /// | |
- *             | \_| ''\---/'' | |
- *              \ .-\__ `-` ___/-. /
- *           ___`. .' /--.--\ `. . __
- *        ."" '< `.___\_<|>_/___.' >'"".
- *       | | : `- \`.;`\ _ /`;.`/ - ` : | |
- *         \ \ `-. \_ __\ /__ _/ .-` / /
+ * _ooOoo_
+ * o8888888o
+ * 88" . "88
+ * (| -_- |)
+ * O\ = /O
+ * ____/`---'\____
+ * .   ' \\| |// `.
+ * / \\||| : |||// \
+ * / _||||| -:- |||||- \
+ * | | \\\ - /// | |
+ * | \_| ''\---/'' | |
+ * \ .-\__ `-` ___/-. /
+ * ___`. .' /--.--\ `. . __
+ * ."" '< `.___\_<|>_/___.' >'"".
+ * | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ * \ \ `-. \_ __\ /__ _/ .-` / /
  * ======`-.____`-.___\_____/___.-`____.-'======
- *                    `=---='
- *
+ * `=---='
+ * <p>
  * .............................................
- *          佛祖保佑             永无BUG
+ * 佛祖保佑             永无BUG
  */
+
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -42,6 +43,7 @@ import com.zzg.object.annotataion.ViewInject;
 import com.zzg.object.R;
 import com.zzg.object.fragment.FourFragment;
 import com.zzg.object.fragment.SecondFragment;
+import com.zzg.object.util.LogUtils;
 import com.zzg.object.util.SnackBarUtil;
 
 public class MainActivity extends BaseActivity {
@@ -74,13 +76,18 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         initView();
         initData();
+        //获取手机型号
+        String model = android.os.Build.MODEL;
+        //  获取手机厂商
+        String carrier = android.os.Build.MANUFACTURER;
+        LogUtils.d("zzg",model+"---------"+carrier);
 
 
     }
 
     private void initData() {
         firstFragment = new FirstFragment();
-        secondFragment=new SecondFragment();
+        secondFragment = new SecondFragment();
         fourFragment = new FourFragment();
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fl_main, firstFragment)
@@ -161,10 +168,11 @@ public class MainActivity extends BaseActivity {
     }
 
     Snackbar snackbar;
+
     private void showSnackbar() {
-        if(snackbar!=null&&snackbar.isShown()){
+        if (snackbar != null && snackbar.isShown()) {
             finishAll();
-        }else{
+        } else {
             snackbar = SnackBarUtil.LongSnackbar(getWindow().getDecorView(), "再次点击退出", SnackBarUtil.Info);
             snackbar.setAction("点击退出啦", new View.OnClickListener() {
                 @Override
