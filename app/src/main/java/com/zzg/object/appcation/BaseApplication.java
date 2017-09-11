@@ -3,6 +3,7 @@ package com.zzg.object.appcation;
 import android.app.Application;
 
 import com.zzg.object.R;
+import com.zzg.object.crash.CrashHandler;
 import com.zzg.object.view.LoadingLayout;
 
 
@@ -17,6 +18,9 @@ public class BaseApplication extends Application {
         super.onCreate();
         //网络加载状态初始化
         initConfig();
+        //抓取异常日志
+        CrashHandler crashHandler = CrashHandler.getInstance();
+        crashHandler.init(this);
 //        if (LeakCanary.isInAnalyzerProcess(this)) {
 //            // This process is dedicated to LeakCanary for heap analysis.
 //            // You should not init your app in this process.
