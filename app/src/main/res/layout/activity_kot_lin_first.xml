@@ -11,8 +11,11 @@
     <TextView
         android:id="@+id/tvv_wocao"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorDeeppink"
+        android:padding="10dp"
         android:text="卧槽" />
 
 

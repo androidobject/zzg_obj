@@ -11,7 +11,7 @@ android {
     buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "com.zzg.object"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -99,6 +99,7 @@ android {
             compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 //            配合kotlin使用包
             compile 'org.jetbrains.anko:anko-sdk15:0.8.3'
+            compile 'com.zhouyou:rxeasyhttp:2.0.0'
         }
     }
 }
