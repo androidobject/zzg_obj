@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.zzg.object.ui.GestureDetectorActivity">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_layout" />
 
     <com.zzg.object.view.TouchFrameLayout
         android:id="@+id/fl_view"

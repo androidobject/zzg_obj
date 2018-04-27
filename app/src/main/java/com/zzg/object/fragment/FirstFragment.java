@@ -11,9 +11,9 @@ import com.zzg.object.R;
 import com.zzg.object.interf.OnRecycleItemClickListener;
 import com.zzg.object.model.MainModel;
 import com.zzg.object.ui.CanvasActivity;
+import com.zzg.object.ui.DataBindingDemo;
 import com.zzg.object.ui.GestureDetectorActivity;
 import com.zzg.object.ui.HttpTestActivity;
-import com.zzg.object.ui.KotLinFirstActivity;
 import com.zzg.object.ui.LoadLayoutDemo;
 import com.zzg.object.ui.LoginActivity;
 import com.zzg.object.ui.MagicLineActivity;
@@ -60,6 +60,7 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("http请求", "", 1));
         mList.add(new MainModel("手势锁", "", 1));
         mList.add(new MainModel("kotlinTest", "", 1));
+        mList.add(new MainModel("DataBinding demo", "", 1));
 
     }
 
@@ -85,10 +86,11 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
             intent = new Intent(getActivity(), GestureDetectorActivity.class);
         } else if (postion == 8) {
             intent = new Intent(getActivity(), HttpTestActivity.class);
-        }else if(postion==9){
+        } else if (postion == 9) {
             intent = new Intent(getActivity(), PatternLockActivity.class);
-        }else if(postion==10){
-            intent= new Intent(getActivity(),new KotLinFirstActivity().getClass());
+        } else if (postion == 10) {
+            intent = new Intent(getActivity(), DataBindingDemo.class);
+        } else if (postion == 11) {
         }
         startActivity(intent);
     }

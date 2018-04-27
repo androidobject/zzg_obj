@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.zzg.object.ui.CanvasActivity">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_layout" />
 
     <com.zzg.object.view.CanvasView
         android:id="@+id/canvas"

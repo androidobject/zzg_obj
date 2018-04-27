@@ -22,17 +22,17 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         //网络加载状态初始化
-        initConfig();
+//        initConfig();
         //抓取异常日志
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(this);
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        crashHandler.init(this);
 //        if (LeakCanary.isInAnalyzerProcess(this)) {
 //            // This process is dedicated to LeakCanary for heap analysis.
 //            // You should not init your app in this process.
 //            return;
 //        }
 //        LeakCanary.install(this);
-        initEasy();
+//        initEasy();
     }
 
     private void initEasy() {

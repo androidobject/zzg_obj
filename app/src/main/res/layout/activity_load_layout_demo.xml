@@ -6,7 +6,7 @@
     app:isFirstVisible="false"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_layout" />
 
     <com.zzg.object.view.LoadingLayout
         android:id="@+id/loading"

@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name=".appcation.BaseApplication"
+        android:name="com.zzg.object.appcation.BaseApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/logo"
@@ -25,7 +25,7 @@
 
         <!-- android:theme="@style/AppBlackTheme" -->
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.zzg.object.ui.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +55,9 @@
             android:name=".ui.HttpTestActivity"
             android:label="@string/title_activity_http_test"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ui.KotLinFirstActivity"></activity>
+
+        <activity android:name=".ui.RxJavaDemoActivity" />
+        <activity android:name=".ui.DataBindingDemo"/>
     </application>
 
 </manifest>

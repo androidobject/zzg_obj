@@ -46,7 +46,6 @@ public class MainRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             //设置显示格式
             Glide.with(mContext)
                     .load(imgs[i])
-                    .centerCrop()
                     .into(image);
             viewList.add(image);
         }
