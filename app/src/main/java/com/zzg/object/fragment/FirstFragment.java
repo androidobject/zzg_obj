@@ -59,7 +59,6 @@ public class FirstFragment extends BaseFragment implements OnRecycleItemClickLis
         mList.add(new MainModel("手势", "", 1));
         mList.add(new MainModel("http请求", "", 1));
         mList.add(new MainModel("手势锁", "", 1));
-        mList.add(new MainModel("kotlinTest", "", 1));
         mList.add(new MainModel("DataBinding demo", "", 1));
 
     }

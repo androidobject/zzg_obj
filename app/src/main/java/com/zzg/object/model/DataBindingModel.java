@@ -1,5 +1,8 @@
 package com.zzg.object.model;
 
+import android.view.View;
+import android.widget.Toast;
+
 /**
  * @author zzg
  * @time 2018/4/26-16:00
@@ -10,9 +13,18 @@ public class DataBindingModel {
     private String username;
     private String nickname;
     private String sex;
+
+
     private String age;
     private String date;
-    private String 赵振国;
+
+    public DataBindingModel(String username, String nickname, String sex, String age, String date) {
+        this.username = username;
+        this.nickname = nickname;
+        this.sex = sex;
+        this.age = age;
+        this.date = date;
+    }
 
     public String getUsername() {
         return username;
@@ -54,11 +66,13 @@ public class DataBindingModel {
         this.date = date;
     }
 
-    public String get赵振国() {
-        return 赵振国;
+
+    public void onclickNick(View view) {
+        Toast.makeText(view.getContext(), nickname, Toast.LENGTH_SHORT).show();
     }
 
-    public void set赵振国(String 赵振国) {
-        this.赵振国 = 赵振国;
+
+    public void onclickUser(View view) {
+        Toast.makeText(view.getContext(), username, Toast.LENGTH_SHORT).show();
     }
 }

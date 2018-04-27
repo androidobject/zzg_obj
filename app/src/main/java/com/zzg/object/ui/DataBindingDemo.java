@@ -5,6 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.zzg.object.R;
+import com.zzg.object.databinding.ActivityBinddemoBinding;
+import com.zzg.object.model.DataBindingModel;
+
+import java.util.Observable;
+
+import static java.lang.Thread.sleep;
 
 /**
  * @author zzg
@@ -29,18 +35,36 @@ import com.zzg.object.R;
  * 需要遵循DataBinding的格式
  */
 public class DataBindingDemo extends AppCompatActivity {
-//    private ActivityBinddemoBinding viewDataBinding;
+    private ActivityBinddemoBinding binddemoBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-//         viewDataBinding = DataBindingUtil.setContentView(DataBindingDemo.this, R.layout.activity_binddemo);
+        binddemoBinding = DataBindingUtil.setContentView(DataBindingDemo.this, R.layout.activity_binddemo);
         initView();
+
+
     }
 
     private void initView() {
 
+        binddemoBinding.nickname.setText("112344");
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                    DataBindingModel model = new DataBindingModel("王三生三世", "sadf", "男", "20", "2017-2-1");
+
+                    binddemoBinding.setUser(model);
+
+                } catch (Exception e) {
+
+                }
+
+            }
+        }).start();
 
 
     }
