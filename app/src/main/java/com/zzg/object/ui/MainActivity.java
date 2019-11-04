@@ -23,6 +23,8 @@ package com.zzg.object.ui;
  * 佛祖保佑             永无BUG
  */
 
+import android.app.Activity;
+import android.app.IntentService;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -45,6 +47,11 @@ import com.zzg.object.fragment.FourFragment;
 import com.zzg.object.fragment.SecondFragment;
 import com.zzg.object.util.LogUtils;
 import com.zzg.object.util.SnackBarUtil;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.TreeSet;
 
 public class MainActivity extends BaseActivity {
 
@@ -80,7 +87,7 @@ public class MainActivity extends BaseActivity {
         String model = android.os.Build.MODEL;
         //  获取手机厂商
         String carrier = android.os.Build.MANUFACTURER;
-        LogUtils.d("zzg",model+"---------"+carrier);
+        LogUtils.d("zzg", model + "---------" + carrier);
 
 
     }
@@ -141,7 +148,6 @@ public class MainActivity extends BaseActivity {
         mDrawerToggle.syncState();
         mDrawer.addDrawerListener(mDrawerToggle);
 
-
     }
 
     private void switchFragment(BaseFragment to) {
@@ -162,8 +168,8 @@ public class MainActivity extends BaseActivity {
         if (mNavigation.isShown()) {
             mDrawer.closeDrawers();
         } else {
-//            showExit();
-            showSnackbar();
+            showExit();
+//            showSnackbar();
         }
     }
 

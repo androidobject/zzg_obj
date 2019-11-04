@@ -28,6 +28,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getLayoutId());
         mActivitys.add(this);
         autoInjectAllField();
+        String string=new String();
     }
 
     @Override

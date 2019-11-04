@@ -7,6 +7,8 @@ import com.zzg.object.R;
 import com.zzg.object.base.BaseActivity;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 
 
 public class RxJavaDemoActivity extends BaseActivity {
@@ -22,7 +24,7 @@ public class RxJavaDemoActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        rxjavademo1();
     }
 
 
@@ -31,13 +33,12 @@ public class RxJavaDemoActivity extends BaseActivity {
      */
     public void rxjavademo1(){
 
-//        Observable.from(names)
-//                .subscribe(new Action1<String>() {
-//                    @Override
-//                    public void call(String name) {
-//                        Log.d("zzg", name);
-//                    }
-//                });
+        Observable<String> observable=Observable.create(new ObservableOnSubscribe<String>() {
+            @Override
+            public void subscribe(ObservableEmitter<String> e) throws Exception {
+
+            }
+        });
 
 
 

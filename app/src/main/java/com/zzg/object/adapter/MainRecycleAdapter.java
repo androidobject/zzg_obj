@@ -42,6 +42,7 @@ public class MainRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         viewList = new ArrayList<View>();
         for (int i = 0; i < imgs.length; i++) {
             ImageView image = new ImageView(mContext);
+            image.setScaleType(ImageView.ScaleType.CENTER_CROP);
             image.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             //设置显示格式
             Glide.with(mContext)
